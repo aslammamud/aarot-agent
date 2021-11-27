@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAppName">#FF6E2B</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorAccent">#D7D81B60</color>
+    <color name="colorTheme">#446b7b</color>
+    <color name="colorLightPurple">#edebfc</color>
+    <color name="colorCard">#6F6A6566</color>
+    <color name="colorCard1">#BFFFFFFF</color>
+    <color name="colorCard2">#AB69F0AE</color>
+    <color name="colorformpage">#00000000</color>
+    <color name="colorformtitleline">#6F6A6566</color>
+    <color name="colorformtitle">#6A6566</color>
+    <color name="red">#D51404</color>
+    <color name="green">#00C853</color>
+    <color name="blue">#3EB7F1</color>
+    <color name="darkBlue">#0F3265</color>
+    <color name="overlay">#d6d7d7</color>
+    <color name="textColor">#FFFFFF</color>
+    <color name="colorHint">#B2FFEB3B</color>
+
+    <color name="textWarning">#FF9100</color>
+
+    <color name="colorWarningButton">#FFC400</color>
+    <color name="colorAcceptButton">#46dc88</color>
+    <color name="colorNavigation">#FF1744</color>
+    <color name="colorDiscardButton">#D5F44336</color>
+    <color name="appMainBackground">#FAFF0D</color>
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+</resources>

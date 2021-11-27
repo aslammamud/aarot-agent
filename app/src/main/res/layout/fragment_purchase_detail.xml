@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="purchaseViewModel"
+            type="com.bottomline.aarot.viewmodels.ShopViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.ProductDetailFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <TextView
+                android:id="@+id/purchaseNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Order ID: `+purchaseViewModel.orderRequest.token}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/availableTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Order Date: `+purchaseViewModel.orderRequest.process_date}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Delivery Date: `+purchaseViewModel.orderRequest.delivery_date}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textSecondary"
+                android:text="@{`Order Person: `+purchaseViewModel.orderRequest.name}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textSecondary"
+                android:text="@{`Shipping Phone: `+purchaseViewModel.orderRequest.phone}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textSecondary"
+                android:text="@{`Shipping Address: `+purchaseViewModel.orderRequest.address}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:paddingStart="15dp"
+                android:background="#90D9DFDC"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:scaleType="fitCenter"
+                    android:text="Name"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="40dp"
+                    android:text="Price"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:scaleType="fitCenter"
+                    android:text="Quantity"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/purchasedetailsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="1"
+                tools:listitem="@layout/purchased_items_row"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/priceTextView"
+                android:background="#90D9DFDC"
+                android:layout_gravity="end"
+                android:padding="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{`Total Price: `+String.valueOf(purchaseViewModel.orderRequest.price) + `৳` }"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        
+        <variable
+            name="shipment"
+            type="com.bottomline.aarot.models.RequestItem" />
+        
+        <variable
+            name="orderRequestInterface"
+            type="com.bottomline.aarot.adapters.OrderRequestListAdapter.OrderRequestInterface" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{()-> orderRequestInterface.onItemClick(shipment)}">
+
+        <TextView
+            android:id="@+id/purchaseTextViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:paddingLeft="25dp"
+            android:scaleType="fitCenter"
+            android:text="@{`Order No : `+shipment.id}"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/purchaseTextViewToken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textColor="@color/colorAccent"
+                android:text="@{`Track ID : `+shipment.token}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+            <TextView
+                android:id="@+id/purchaseTextViewDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@{`Ordered: `+shipment.process_date}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="25dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="customer"
+                android:gravity="end"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+            <TextView
+                android:id="@+id/orderDeliveryDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:textColor="@color/green"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="20dp"
+            android:paddingStart="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/orderStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requested"
+                android:gravity="center"
+                android:layout_marginEnd="30dp"
+                android:textColor="@color/textWarning"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+
+            <androidx.legacy.widget.Space
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/acceptOrderButton"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accept Delivery"
+                android:textAllCaps="false"
+                android:fontFamily="@font/allerta"
+                android:textColor="@color/green"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

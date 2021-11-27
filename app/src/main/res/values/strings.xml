@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AAROT MELA</string>
+    <string name="app_version">Agent Version</string>
+    <string name="app_user">AAROT AGENT</string>
+
+    <string name="facebook_app_id">1380700692348785</string>
+    <string name="fb_login_protocol_scheme">fb1380700692348785</string>
+
+</resources>
